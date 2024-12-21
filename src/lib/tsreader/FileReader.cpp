@@ -72,7 +72,7 @@ long FileReader::OpenFile()
   do
   {
     kodi::Log(ADDON_LOG_INFO, "FileReader::OpenFile() %s.", m_fileName.c_str());
-    if (m_file.OpenFile(m_fileName, ADDON_READ_CHUNKED))
+    if (m_file.OpenFile(m_fileName, ADDON_READ_NO_BUFFER))
     {
       break;
     }
